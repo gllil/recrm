@@ -1,0 +1,22 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.list-group-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.custom-accordion .accordion-button,
+.custom-accordion .accordion-button:not(.collapsed) {
+  background-color: transparent !important; /* Keeps background color the same when expanded */
+  color: inherit !important; /* Keeps text color the same when expanded */
+  padding: 5px 0px;
+}
