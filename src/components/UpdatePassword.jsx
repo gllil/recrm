@@ -68,6 +68,7 @@ const UpdatePassword = ({ setShow, setAuth }) => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 isInvalid={touched.password && !!errors.password}
+                required
               />
               <BootstrapForm.Control.Feedback type="invalid">
                 {errors.password}
@@ -84,6 +85,7 @@ const UpdatePassword = ({ setShow, setAuth }) => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 isInvalid={touched.confirmPassword && !!errors.confirmPassword}
+                required
               />
               <BootstrapForm.Control.Feedback type="invalid">
                 {errors.confirmPassword}

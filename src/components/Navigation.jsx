@@ -200,7 +200,7 @@ const Navigation = ({ children }) => {
 
       {/* Permanent sidebar for desktop */}
       <Container fluid>
-        <Row>
+        <Row className="pb-5">
           <Col xs={2} className="p-0 vh-100 border-end d-none d-md-block">
             <ListGroup as="ul" variant="flush">
               <ListGroup.Item>

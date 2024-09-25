@@ -100,7 +100,7 @@ const Register = () => {
             <BootstrapForm.Label>
               Are you joining an existing team?
             </BootstrapForm.Label>
-            <BootstrapForm.Select onChange={handleExistingTeamChange}>
+            <BootstrapForm.Select onChange={handleExistingTeamChange} required>
               <option value={null}>Choose One</option>
               <option value={true}>Yes</option>
               <option value={false}>No, Create a new team</option>
@@ -120,15 +120,8 @@ const Register = () => {
                 onInputChange={(text) => setCompanySearch(text)}
                 options={companyOptions}
                 placeholder="Type in name of Brokerage"
+                required={showBrokerageSelect}
               />
-              {/* <BootstrapForm.Select onChange={handleCompanySelect}>
-                <option>Select a Brokerage</option>
-                {accounts?.map((account) => (
-                  <option key={account.id} value={account.id}>
-                    {account.companyName}
-                  </option>
-                ))}
-              </BootstrapForm.Select> */}
             </BootstrapForm.Group>
           )}
           {showForm && (
@@ -294,6 +287,7 @@ const Register = () => {
                             onChange={handleChange}
                             onBlur={handleBlur}
                             isInvalid={touched.firstName && !!errors.firstName}
+                            required
                           />
                           <BootstrapForm.Control.Feedback type="invalid">
                             {errors.firstName}
@@ -614,7 +608,7 @@ const Register = () => {
           )}
         </Col>
       </Row>
-      <Row>
+      <Row className="my-5">
         <Col className="text-center">
           <a href="/">Already a User? Login</a>
         </Col>
